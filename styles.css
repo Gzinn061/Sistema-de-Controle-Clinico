@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* Estilo geral */
+body {
+    font-family: "Bree Serif", sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-size: cover;
+    overflow-x: hidden;
+    background: image('gzinn/bg.jpg');
+  }
+  
+  /* Navbar flutuante com glassmorphism */
+  .navbar {
+    background: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade para Safari */
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25px;
+    z-index: 1000;
+  }
+  
+  /* Ajuste dos links da navbar */
+  .nav-link, .navbar-brand {
+    color: #fff; /* Cor branca para contraste */
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+  }
+  
+  .nav-link:hover, .navbar-brand:hover {
+    color: #0622BF; /* Efeito hover */
+  }
+  
+  /* Efeito de glassmorphism para o conteúdo */
+  .container {
+    background: rgba(255, 255, 255, 0.3); /* Transparência suave */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Sombra de vidro */
+    backdrop-filter: blur(15px); /* Desfoque */
+    -webkit-backdrop-filter: blur(15px); /* Compatibilidade com Safari */
+    color: #ffffff;
+    margin-top: 80px; /* Para compensar a navbar fixa */
+  }
+  
+  /* Estilo do botão com efeito glass */
+  .button button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #A8D5BA;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Efeito de hover para o botão */
+  .button button:hover {
+    background-color: #FF6F61;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Efeito de onda no clique do botão */
+  .button button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  /* Expansão da onda ao clicar */
+  .button button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0s;
+  }
+  
+  /* Conteúdos de cada aba */
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    color: #A8D5BA;
+  }
+
+  
+ .home, p {
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    align-items: center;
+    padding: 50px;
+    color: #F0F2F5;
+}
+
+.home {
+    background-color: #5A9BD5;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.button button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0622BF;
+    background-color: #F0F2F5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button button:hover {
+    background-color: #0622BF;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #F0F2F5;
+    color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .button button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0s;
+  }
+  
+  .cadastrar {
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 40px;
+    margin: 30px;
+  }
+
+  .salvar {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  #button {
+    justify-content: center;
+    text-align: center;
+    color: #98DDCA;
+    background-color: #0622BF;
+    padding: 12px 24px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin: 30px;
+    display: flex;
+  }
+
+  #button:hover {
+    color: #0622BF;
+    background-color: #98DDCA;
+    transition: 0.3s ease;
+  }
+
+  #botao-verde /* 10 anos so p isso se lascar 😪*/ {
+    --bs-btn-color: #0622BF;
+    --bs-btn-border-color: #0622BF;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0622BF;
+    --bs-btn-hover-border-color: #0622BF;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0622BF;
+    --bs-btn-active-border-color: #0622BF;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #0622BF;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #0622BF;
+    --bs-gradient: none;
+}
+  
