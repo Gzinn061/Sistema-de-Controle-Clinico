@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="styles.css">
 <div class="salvar">
-    <h1>Listar Paciente</h1>
+    <h1>Listar Pacientes</h1>
     <?php
     $sql = "SELECT * FROM paciente";
 
@@ -40,7 +40,6 @@
             print "<td>" . $row->endereco_paciente . "</td>";
             print "<td>" . $row->dt_nasc_paciente . "</td>";
             print "<td>" . $sexo . "</td>";
-            print "</tr>";
             print "<td>
 			 	<button class='btn btn-success' 
 				onclick=\"
@@ -49,7 +48,7 @@
 			 	
 				<button class ='btn btn-danger'onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-paciente&acao=excluir&id_paciente=" . $row->id_paciente . "';}else{false;}\">Excluir</button>
 				</td>";
-            print "<tr>";
+            print "</tr>";
         }
         print "</table>";
     } else {

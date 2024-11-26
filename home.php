@@ -17,9 +17,6 @@
             <br> No que podemos te ajudar hoje?
         </p>
 
-        <div class="button" href="?page=cadastrar-consulta.php">
-            <button type="submit" id="goToList">Agendar Consulta!</button>
-        </div>
 
     </div>
 </body>

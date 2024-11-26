@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/* Estilo geral */
 
-/* Estilo geral */
 body {
-    font-family: "Bree Serif", sans-serif;
-    margin: 0;
-    padding: 40px;
-    background-size: cover;
-    overflow-x: hidden;
-    background: image('gzinn/bg.jpg');
-  }
+  font-family: "Parkinsans", sans-serif;
+  margin: 0;
+  padding: 0px;
+}
   
   /* Navbar flutuante com glassmorphism */
   .navbar {
@@ -114,7 +110,7 @@ body {
     font-size: 18px;
     align-items: center;
     padding: 50px;
-    color: #F0F2F5;
+    color: #000;
 }
 
 .home {
@@ -125,53 +121,19 @@ body {
     margin-top: 40px;
 }
 
-.button button {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #0622BF;
-    background-color: #F0F2F5;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .button button:hover {
-    background-color: #0622BF;
-    color: black;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .button button:active {
-    transform: translateY(1px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .button button::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: #F0F2F5;
-    color: black;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-  }
-  
-  .button button:active::after {
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 0s;
-  }
-  
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
   .cadastrar {
     text-align: center;
     justify-content: center;

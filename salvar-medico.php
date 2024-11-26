@@ -1,10 +1,10 @@
 
 <?php
-switch (@$_REQUEST['acao']) {
+switch ($_REQUEST["acao"]) {
 	case 'cadastrar':
-		$nome = $_REQUEST['nome_medico'];
-		$crm = $_REQUEST['crm_medico'];
-		$especialidade = $_REQUEST['especialidade_medico'];
+		$nome = $_POST['nome_medico'];
+		$crm = $_POST['crm_medico'];
+		$especialidade = $_POST['especialidade_medico'];
 
 		$sql = "INSERT INTO medico (
 							nome_medico,
@@ -30,6 +30,23 @@ switch (@$_REQUEST['acao']) {
 		$nome = $_POST['nome_medico'];
 		$crm = $_POST['crm_medico'];
 		$especialidade = $_POST['especialidade_medico'];
+
+		$sql = "UPDATE medico SET
+						nome_medico='{$nome}',
+						crm_medico='{$crm}',
+						especialidade_medico='{$especialidade}'
+					WHERE
+						id_medico=" . $_POST['id_medico'];
+
+		$res = $conn->query($sql);
+
+		if ($res == true) {
+			print "<script>alert('Editou com sucesso!');</script>";
+			print "<script>location.href='?page=listar-medico';</script>";
+		} else {
+			print "<script>alert('Deu errado');</script>";
+			print "<script>location.href='?page=listar-medico';</script>";
+		}
 
 		break;
 	case 'excluir':

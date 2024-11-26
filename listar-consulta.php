@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="styles.css">
 <div class="salvar">
-    <h1>Listar Consulta</h1>
+    <h1>Listar Consultas</h1>
     <?php
-    $sql = "SELECT * FROM consulta";
+    $sql = "SELECT * FROM consulta AS c
+            INNER JOIN paciente AS p
+            ON p.id_paciente = c.paciente_id_paciente
+            INNER JOIN medico AS m
+            ON m.id_medico = c.medico_id_medico";
 
     $res = $conn->query($sql);
 
@@ -14,17 +18,21 @@
         print "<table class='table table-bordered table-striped table-hover'>";
         print "<tr>";
         print "<th>#</th>";
+        print "<th>Nome do Paciente</th>";
+        print "<th>Nome do Médico</th>";
         print "<th>Data da Consulta</th>";
         print "<th>Horário da Consulta</th>";
         print "<th>Descrição da Consulta</th>";
+        print "<th>Ações</th>";
         print "</tr>";
         while ($row = $res->fetch_object()) {
             print "<tr>";
             print "<td>" . $row->id_consulta . "</td>";
-            print "<td>" . $row->dia_consulta . "</td>";
+            print "<td>" . $row->nome_medico . "</td>";
+            print "<td>" . $row->nome_paciente . "</td>";
+            print "<td>" . $row->data_consulta . "</td>";
             print "<td>" . $row->hora_consulta . "</td>";
             print "<td>" . $row->descricao_consulta . "</td>";
-            print "</tr>";
             print "<td>
 			 	<button class='btn btn-success' 
 				onclick=\"
@@ -33,7 +41,7 @@
 			 	
 				<button class ='btn btn-danger'onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-consulta&acao=excluir&id_consulta=" . $row->id_consulta . "';}else{false;}\">Excluir</button>
 				</td>";
-            print "<tr>";
+            print "</tr>";
         }
         print "</table>";
     } else {
