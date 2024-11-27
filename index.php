@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sistema de Controle Clínico</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -54,6 +54,17 @@
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="?page=cadastrar-paciente">Cadastrar</a></li>
 							<li><a class="dropdown-item" href="?page=listar-paciente">Listar</a></li>
+
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Medicações
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="?page=cadastrar-medicacao">Cadastrar</a></li>
+							<li><a class="dropdown-item" href="?page=listar-medicacao">Listar</a></li>
 
 						</ul>
 					</li>

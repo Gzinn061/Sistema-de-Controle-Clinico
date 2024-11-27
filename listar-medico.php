@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 <div class="salvar">
 	<h1>Listar Médicos</h1>
 	<?php

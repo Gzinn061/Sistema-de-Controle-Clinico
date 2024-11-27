@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 
 <div class="cadastrar" id="cadastrar-paciente">
     <h1>Cadastrar Paciente</h1>

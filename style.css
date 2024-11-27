@@ -1,11 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/* Estilo geral */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
+* {
   font-family: "Parkinsans", sans-serif;
   margin: 0;
   padding: 0px;
 }
   
+body {
+  font-family: "Parkinsans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0f7fa, #884f40, #914083);
+  background-size: 400% 400%;
+  animation: gradientBackground 8s ease infinite;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   /* Navbar flutuante com glassmorphism */
   .navbar {
     background: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
@@ -16,16 +37,16 @@ body {
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     left: 50%;
     transform: translateX(-50%);
     top: 25px;
-    z-index: 1000;
+    z-index: 900;
   }
   
   /* Ajuste dos links da navbar */
   .nav-link, .navbar-brand {
-    color: #fff; /* Cor branca para contraste */
+    color: #af4343; /* Cor branca para contraste */
     font-weight: bold;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto */
   }
@@ -38,56 +59,11 @@ body {
   .container {
     background: rgba(255, 255, 255, 0.3); /* Transparência suave */
     border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Sombra de vidro */
+    padding: 1rem;
     backdrop-filter: blur(15px); /* Desfoque */
     -webkit-backdrop-filter: blur(15px); /* Compatibilidade com Safari */
     color: #ffffff;
-    margin-top: 80px; /* Para compensar a navbar fixa */
-  }
-  
-  /* Estilo do botão com efeito glass */
-  .button button {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: #A8D5BA;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Efeito de hover para o botão */
-  .button button:hover {
-    background-color: #FF6F61;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Efeito de onda no clique do botão */
-  .button button::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-  }
-  
-  /* Expansão da onda ao clicar */
-  .button button:active::after {
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 0s;
+    margin-top: 70px; /* Para compensar a navbar fixa */
   }
   
   /* Conteúdos de cada aba */
@@ -104,50 +80,70 @@ body {
   }
 
   
- .home, p {
+  .home, p {
     text-align: center;
     justify-content: center;
     font-size: 18px;
     align-items: center;
     padding: 50px;
     color: #000;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+  background: linear-gradient(165deg, #dfdb0a, #e05e22, #9e1e1e);
+  background-size: 400% 400%;
+  border-radius: 10px;
+  font-size: 19.5px;
+  font-weight: 500;
+  margin-top: 20px;
+  box-shadow: 0 5px 22px;
 }
 
 .home {
-    background-color: #5A9BD5;
+    background-color: #7da9cf;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards; /* Animação de entrada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito no hover */
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
+.home:hover {
+    transform: translateY(-5px); /* Leve movimento para cima */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Maior destaque */
 }
-.btn:hover {
-  background-color: #0056b3;
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-  .cadastrar {
-    text-align: center;
-    justify-content: center;
-    color: black;
-    font-size: 40px;
-    margin: 30px;
-  }
+
 
   .salvar {
     color: black;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: 600;
   }
+
+  .cadastrar {
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
   #button {
     justify-content: center;
     text-align: center;

@@ -29,3 +29,12 @@ CREATE TABLE Paciente (
   endereco_paciente VARCHAR(100) NULL,
   PRIMARY KEY(id_paciente)
 );
+
+CREATE TABLE medicacao (
+  id_medicacao INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  paciente_id_paciente INTEGER UNSIGNED NOT NULL,
+  nome_medicacao VARCHAR(100) NULL,
+  dosagem_medicacao VARCHAR(20) NULL,
+  PRIMARY KEY(id_medicacao),
+  INDEX medicacao_FKIndex1(paciente_id_paciente)
+);
