@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="style.css">
-<div class="cadastrar">
+<div class="cadastrar" id="cadastrar-medicacao">
     <h1>Cadastrar Medicações</h1>
 </div>
 
 <div class="salvar" id="salvar-medicacao">
     <form action="?page=salvar-medicacao" method="POST">
-        <input type="hidden" name="acao" value="cadastrar">
+        <input type="hidden" name="acao" value="cadastrar" required>
         <div class="mb-3">
-            <label>Nome da Medicação</label>
+            <label>Nome do Paciente que irá receber a Medicação</label>
             <select name="paciente_id_paciente" class="form-control">
-                <option>Escolha um Paciente para atribuir a medicação</option>
+                <option>Escolha um Paciente para atribuir a medicação!</option>
                 <?php
                 $sql_1 = "SELECT id_paciente, nome_paciente FROM paciente";
 
@@ -29,11 +29,11 @@
         </div>
 
         <div class="salvar" id="salvar-consulta">
-            <input type="hidden" name="acao" value="cadastrar">
+            <input type="hidden" name="acao" value="cadastrar" required>
             <div class="mb-3">
                 <label>Nome do Médico</label>
                 <select name="medico_id_medico" class="form-control">
-                    <option>Escolha o Médico que autorizou a medicação</option>
+                    <option>Escolha o Médico que autorizou a medicação!</option>
                     <?php
                     $sql_2 = "SELECT id_medico, nome_medico FROM medico";
 
@@ -53,11 +53,32 @@
             </div>
         </div>
 
+        <div class="mb-3">
+            <label for="nome_medicacao">Medicações Disponíveis</label>
+            <select id="nome_medicacao" name="nome_medicacao" class="form-control" required>
+                <option value="">Selecione</option>
+                <option value="DP">Dipirona</option>
+                <option value="IBP">Ibuprofeno</option>
+                <option value="LT">Loratadina</option>
+                <option value="DF">Dorflex</option>
+                <option value="RV">Rivotril</option>
+                <option value="TB">Trembolona</option>
+                <option value="MZ">Miozam</option>
+            </select>
+        </div>
+
         <div class="salvar" id="salvar-medicacao">
-            <input type="hidden" name="acao" value="cadastrar">
+            <input type="hidden" name="acao" value="cadastrar" required>
             <div class="mb-3">
-                <label>Descrição e Dosagem da Medicação</label>
+                <label>Descrição e Dosagem da Medicação!</label>
                 <textarea name="dosagem_medicacao" class="form-control" placeholder="Digite a Descrição e Dosagem da Medicação!" required max="250"></textarea>
             </div>
         </div>
+
+        <div class="save-form" id="salvar-form">
+            <div class="mb-3">
+                <button id="button" submit class="btn btn-success">Salvar</button>
+            </div>
+
+    </form>
 </div>

@@ -126,6 +126,18 @@
 					case 'salvar-paciente':
 						include('salvar-paciente.php');
 						break;
+					case 'cadastrar-medicacao':
+						include('cadastrar-medicacao.php');
+						break;
+					case 'editar-medicacao':
+						include('editar-medicacao.php');
+						break;
+					case 'listar-medicacao':
+						include('listar-medicacao.php');
+						break;
+					case 'salvar-medicacao':
+						include('salvar-medicacao.php');
+						break;
 
 					default:
 						include('home.php');

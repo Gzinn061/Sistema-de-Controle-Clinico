@@ -147,6 +147,7 @@ p {
   #button {
     justify-content: center;
     text-align: center;
+    align-items: center;
     color: #98DDCA;
     background-color: #0622BF;
     padding: 12px 24px;
@@ -180,5 +181,31 @@ p {
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: #0622BF;
     --bs-gradient: none;
+}
+
+footer {
+  position: fixed;
+  bottom: -150px;
+  width: 90%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-left: 40px;
+}
+
+footer a {
+  color: #0622bf;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
   

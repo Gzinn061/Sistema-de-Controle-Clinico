@@ -2,9 +2,6 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,6 +16,11 @@
 
 
     </div>
+
 </body>
 
 </html>
+
+<footer id="paragrafo">
+    Desenvolvido por : : <a href="https://github.com/Gzinn061" target="_blank">Guilherme Nunes</a>, 2024.
+</footer>
